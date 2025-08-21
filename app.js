@@ -10,7 +10,7 @@
     if (nome === "") {
       alert("Por favor, insira um nome.");
       return;
-      }
+    }
 
     // Atualiza o array
     amigos.push(nome);
@@ -34,4 +34,19 @@
     });
   }
 
+  function sortearAmigo() {
+    if (amigos.length === 0) {
+      alert("A lista está vazia! Adicione amigos primeiro.");
+      return;
+    }
 
+    // Escolhe um número aleatório de 0 até o tamanho da lista
+    const indice = Math.floor(Math.random() * amigos.length);
+
+    // Pega o amigo correspondente
+    const amigoSorteado = amigos[indice];
+
+    // Mostra o resultado na tela
+    document.getElementById("resultado").textContent =
+      "O amigo sorteado é: " + amigoSorteado + " 🎉";
+    }
