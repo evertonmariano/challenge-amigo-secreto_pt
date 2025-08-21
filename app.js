@@ -22,3 +22,16 @@
     input.value = "";
   }
 
+  function atualizarLista() {
+      const lista = document.getElementById("listaAmigos");
+      lista.innerHTML = ""; // Limpa a lista anterior
+
+      // Cria os <li> para cada amigo
+      amigos.forEach(function(amigo) {
+        const li = document.createElement("li");
+        li.textContent = amigo;
+        lista.appendChild(li);
+      });
+    }
+
+
